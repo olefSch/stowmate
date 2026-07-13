@@ -1,0 +1,21 @@
+# Binaries
+stowmate
+*.exe
+/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+*.test
+*.out
+coverage.html
+
+# OpenSpec working files (keep specs, ignore scratch)
