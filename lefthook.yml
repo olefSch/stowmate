@@ -1,0 +1,14 @@
+pre-commit:
+  parallel: true
+  commands:
+    vet:
+      run: just vet
+    lint:
+      run: just lint
+    test:
+      run: just test
+
+commit-msg:
+  commands:
+    commitlint:
+      run: npx --yes commitlint --edit {1}
