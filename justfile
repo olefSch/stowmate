@@ -27,7 +27,10 @@ coverage:
 tidy:
     go mod tidy
 
-check: vet lint test
+vuln:
+    go run golang.org/x/vuln/cmd/govulncheck@latest ./...
+
+check: vet lint test vuln
 
 default:
     @just --list
