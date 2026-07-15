@@ -46,20 +46,12 @@ stowmate run -t /tmp/demo
 
 ## Step-by-step behavior
 
-When you run `stowmate run`, stowmate does the following for each package:
+For each package, `stowmate run` loads configuration, installs the declared system dependency, removes stale files, resolves symlink conflicts, creates symlinks with GNU Stow, and runs post-install hooks.
 
-1. Load `.stowmate.toml` from the dotfiles directory.
-2. Detect the OS and package manager.
-3. Ensure GNU Stow is installed.
-4. Ask to set up the package (skipped with `--yes`).
-5. Resolve the system package name for the current OS and package manager.
-6. Install the system package.
-7. Run `pre_clean` commands to remove stale files.
-8. Detect and resolve symlink conflicts.
-9. Run `stow` to create the symlinks.
-10. Run `post_install` hooks.
+See [How it works](../introduction.md#how-it-works) for the full pipeline.
 
-If a package fails, stowmate prompts you to continue. Use `--yes` to continue without asking.
+!!! note "Per-package confirmation"
+    By default stowmate asks whether to set up each package. Use `--yes` to skip these prompts and continue automatically.
 
 !!! warning "Dry-run mode"
     `--dry-run` only prints the plan; it does not install dependencies, clean files, or create symlinks.

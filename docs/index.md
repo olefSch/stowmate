@@ -7,6 +7,15 @@ Stowmate sits between your dotfiles repository and your system: it discovers pac
 !!! tip "What stowmate is not"
     Stowmate is not a replacement for GNU Stow. It *orchestrates* Stow, plus the package-manager and shell-hook steps that usually surround it.
 
+## What it does
+
+- **:package: Package-aware** — Discovers every package in your dotfiles directory and processes each one individually.
+- **:gear: Dependency handling** — Installs system packages automatically via the detected package manager.
+- **:link: Conflict-free symlinks** — Detects and resolves stale files before creating Stow symlinks.
+- **:rocket: One-command setup** — Goes from a fresh machine to a configured environment with `stowmate run`.
+
+---
+
 ## Quick install
 
 === "Go install"
@@ -20,6 +29,8 @@ Stowmate sits between your dotfiles repository and your system: it discovers pac
 === "Binary download"
 
     Download a pre-built binary for Linux or macOS (amd64 or arm64) from the [GitHub Releases](https://github.com/stowmate/stowmate/releases) page.
+
+---
 
 ## Quick start
 

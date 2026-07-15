@@ -23,21 +23,36 @@ Each folder is a *Stow package*. With plain Stow, turning those folders into sym
 
 Stowmate automates that surrounding work. It also gives you a per-package config file (`.stowmate.toml`) so each package can declare its own target directory, system dependency, and hooks.
 
+---
+
 ## How it works
 
-Running `stowmate run` executes a pipeline for each package:
+Running `stowmate run` executes a pipeline for each package.
+
+### Phase 1: Discovery & Detection
 
 1. **Discover** — Find every subdirectory in the dotfiles directory.
 2. **Detect environment** — Identify the OS and package manager (brew, apt, dnf, pacman, zypper).
 3. **Ensure Stow** — Install GNU Stow if it is missing.
+
+### Phase 2: Preparation
+
 4. **Load config** — Read `.stowmate.toml` in the dotfiles directory.
 5. **Resolve system package** — Pick the right dependency name for the current OS and package manager.
 6. **Install dependency** — Install the system package via the detected package manager.
 7. **Pre-clean** — Remove files listed in the package's `pre_clean` array.
+
+### Phase 3: Installation
+
 8. **Detect conflicts** — Find files that would block Stow from creating symlinks.
 9. **Resolve conflicts** — Prompt to delete conflicts (or delete automatically with `--force`).
 10. **Stow** — Run `stow` to create the symlinks.
 11. **Post-install hooks** — Run the commands listed in `post_install`.
+
+!!! tip "Skip prompts with `--yes`"
+    Pass `--yes` to answer all setup and continuation prompts automatically. Use `--force` to delete file conflicts without asking.
+
+---
 
 ## Installation
 
@@ -59,12 +74,16 @@ Download a pre-built binary for Linux or macOS (amd64 or arm64) from the [Releas
 - **For Go install:** Go 1.25 or later.
 - **For package installation:** A supported package manager must be available on the system.
 
+---
+
 ## Supported platforms
 
 | OS      | Package managers |
 |---------|------------------|
 | macOS   | `brew`           |
 | Linux   | `apt`, `dnf`, `pacman`, `zypper` |
+
+---
 
 ## Dotfiles directory layout
 
@@ -88,6 +107,8 @@ Each package folder is processed independently. When you run `stowmate run`, it 
 
 !!! tip "Configuration file"
     Place `.stowmate.toml` in the root of the dotfiles directory to customize per-package targets, dependencies, and hooks. See the [Configuration](configuration.md) reference.
+
+---
 
 ## Next steps
 

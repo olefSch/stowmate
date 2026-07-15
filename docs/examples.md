@@ -31,10 +31,6 @@ sys_package = "git"
 [packages.nvim]
 target = "$HOME/.config"
 sys_package = "neovim"
-sys_package_linux_apt = "neovim"
-sys_package_linux_dnf = "neovim"
-sys_package_linux_pacman = "neovim"
-sys_package_linux_zypper = "neovim"
 pre_clean = ["$HOME/.cache/nvim"]
 post_install = ["nvim --headless +PackerSync +q"]
 post_remove = ["echo 'nvim removed'"]
@@ -65,13 +61,14 @@ Once the preview looks correct, run it for real:
 
 ```bash
 $ stowmate run --yes
-Do you want to setup git? (Y/n) y
-Do you want to setup nvim? (Y/n) y
-Do you want to setup tmux? (Y/n) y
-Do you want to setup zsh? (Y/n) y
+Setting up git...
+Setting up nvim...
+Setting up tmux...
+Setting up zsh...
 ```
 
-With `--yes`, the prompts are skipped and stowmate proceeds through all packages.
+!!! note "`--yes` skips prompts"
+    `--yes` answers the per-package confirmation prompts automatically; it does not show them.
 
 After it finishes, your home directory contains symlinks such as:
 
@@ -98,22 +95,22 @@ stowmate remove tmux
 
 This removes the `~/.tmux.conf` symlink. It does not uninstall the `tmux` package from the system.
 
+---
+
 ## Example 2: Cross-platform package names
 
 Some programs are packaged under different names on different platforms. You can use the most specific keys for those cases.
 
+For example, the `fd` command-line tool is `fd` in Homebrew but `fd-find` in apt:
+
 ```toml
-[packages.ripgrep]
+[packages.fd]
 target = "$HOME"
-sys_package = "ripgrep"
-sys_package_macos = "ripgrep"
-sys_package_linux_apt = "ripgrep"
-sys_package_linux_dnf = "ripgrep"
-sys_package_linux_pacman = "ripgrep"
-sys_package_linux_zypper = "ripgrep"
+sys_package = "fd-find"
+sys_package_macos = "fd"
 ```
 
-Stowmate resolves the name for the current OS and package manager automatically. If you later add a platform where the package name differs, add the specific key for it.
+On macOS stowmate installs `fd`; on Ubuntu it installs `fd-find`. If you later add a platform where the name differs again, add the specific key for it.
 
 !!! tip "Keep it simple"
     Only add platform-specific keys when the name actually differs. If the package name is the same everywhere, a single `sys_package` is enough.
