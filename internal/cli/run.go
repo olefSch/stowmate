@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/stowmate/stowmate/internal/config"
-	"github.com/stowmate/stowmate/internal/orchestrator"
-	"github.com/stowmate/stowmate/internal/runner"
-	"github.com/stowmate/stowmate/internal/sysdetect"
+	"github.com/olefSch/stowmate/internal/config"
+	"github.com/olefSch/stowmate/internal/orchestrator"
+	"github.com/olefSch/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/sysdetect"
 )
 
 // newRunCmd creates the `stowmate run` command.

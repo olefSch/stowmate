@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 // managerChecks lists the supported package managers in priority order. The

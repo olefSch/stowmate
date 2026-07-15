@@ -5,8 +5,8 @@ import (
 
 	"github.com/charmbracelet/log"
 	"github.com/spf13/cobra"
-	"github.com/stowmate/stowmate/internal/config"
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/config"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 var (

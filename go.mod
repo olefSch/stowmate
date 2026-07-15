@@ -1,4 +1,4 @@
-module github.com/stowmate/stowmate
+module github.com/olefSch/stowmate
 
 go 1.25.11
 

@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/spf13/afero"
-	"github.com/stowmate/stowmate/internal/config"
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/config"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 func setHome(t *testing.T, home string) {

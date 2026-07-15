@@ -1,6 +1,6 @@
 package orchestrator
 
-import "github.com/stowmate/stowmate/internal/runner"
+import "github.com/olefSch/stowmate/internal/runner"
 
 // ExecuteStow runs "stow -d <dotfilesPath> -R -t <target> <package>" so that
 // the stow directory is set without requiring working-directory support from

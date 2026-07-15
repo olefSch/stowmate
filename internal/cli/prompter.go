@@ -2,7 +2,7 @@ package cli
 
 import (
 	"github.com/charmbracelet/huh"
-	"github.com/stowmate/stowmate/internal/orchestrator"
+	"github.com/olefSch/stowmate/internal/orchestrator"
 )
 
 // HuhPrompter implements orchestrator.Prompter using charmbracelet/huh for

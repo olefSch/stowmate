@@ -3,8 +3,8 @@ package cli
 import (
 	"github.com/charmbracelet/log"
 	"github.com/spf13/afero"
-	"github.com/stowmate/stowmate/internal/orchestrator"
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/orchestrator"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 // cliContext holds the runtime dependencies for the CLI. Tests construct this

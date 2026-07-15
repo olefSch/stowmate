@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 func TestDetectOS(t *testing.T) {
