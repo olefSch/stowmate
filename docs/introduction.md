@@ -61,12 +61,12 @@ Running `stowmate run` executes a pipeline for each package.
 Requires Go 1.25 or later.
 
 ```bash
-go install github.com/stowmate/stowmate/cmd/stowmate@latest
+go install github.com/olefSch/stowmate/cmd/stowmate@latest
 ```
 
 ### GitHub Releases
 
-Download a pre-built binary for Linux or macOS (amd64 or arm64) from the [Releases](https://github.com/stowmate/stowmate/releases) page.
+Download a pre-built binary for Linux or macOS (amd64 or arm64) from the [Releases](https://github.com/olefSch/stowmate/releases) page.
 
 ## Prerequisites
 

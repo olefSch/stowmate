@@ -23,12 +23,12 @@ Stowmate sits between your dotfiles repository and your system: it discovers pac
     Requires Go 1.25 or later.
 
     ```bash
-    go install github.com/stowmate/stowmate/cmd/stowmate@latest
+    go install github.com/olefSch/stowmate/cmd/stowmate@latest
     ```
 
 === "Binary download"
 
-    Download a pre-built binary for Linux or macOS (amd64 or arm64) from the [GitHub Releases](https://github.com/stowmate/stowmate/releases) page.
+    Download a pre-built binary for Linux or macOS (amd64 or arm64) from the [GitHub Releases](https://github.com/olefSch/stowmate/releases) page.
 
 ---
 
