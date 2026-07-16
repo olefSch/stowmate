@@ -1,7 +1,7 @@
 VERSION := `git describe --tags --always --dirty 2>/dev/null || echo dev`
-COMMIT := `git rev-parse --short HEAD`
+COMMIT := `git rev-parse --short HEAD 2>/dev/null || echo unknown`
 DATE := `date -u +%Y-%m-%dT%H:%M:%SZ`
-LDFLAGS := "-s -w"
+LDFLAGS := '-s -w'
 
 build:
     go build -trimpath -buildvcs=false -ldflags="{{LDFLAGS}} -X main.version={{VERSION}} -X main.commit={{COMMIT}} -X main.date={{DATE}}" -o stowmate ./cmd/stowmate/
