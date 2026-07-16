@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
-	"github.com/stowmate/stowmate/internal/config"
-	"github.com/stowmate/stowmate/internal/orchestrator"
-	"github.com/stowmate/stowmate/internal/sysdetect"
+	"github.com/olefSch/stowmate/internal/config"
+	"github.com/olefSch/stowmate/internal/orchestrator"
+	"github.com/olefSch/stowmate/internal/sysdetect"
 )
 
 // newPackageCmd creates the `stowmate package <name>` command.

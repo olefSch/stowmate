@@ -32,5 +32,11 @@ vuln:
 
 check: vet lint test vuln
 
+docs-serve:
+    uvx zensical serve
+
+docs-build:
+    uvx zensical build
+
 default:
     @just --list

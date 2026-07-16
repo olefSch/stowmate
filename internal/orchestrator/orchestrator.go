@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"github.com/spf13/afero"
-	"github.com/stowmate/stowmate/internal/config"
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/config"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 // Orchestrator coordinates package setup and removal. It is intentionally

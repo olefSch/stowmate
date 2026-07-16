@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/stowmate/stowmate/internal/runner"
+	"github.com/olefSch/stowmate/internal/runner"
 )
 
 // ExecuteHooks runs hook scripts sequentially. Errors are logged but do not
