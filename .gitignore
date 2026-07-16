@@ -1,5 +1,5 @@
 # Binaries
-stowmate
+/stowmate
 *.exe
 /dist/
 
